@@ -1,4 +1,4 @@
-package com.clairedl.scala
+
 
 class Author(var n: String, var e: String, var g: Char) {
 
@@ -43,6 +43,6 @@ class Book(var n: String, var a: Author, var p: Double, var q: Int){
       "Book[name= " + name + "," + author.toString() + ", price= " + price + ", quantity= " + quantity
     }
 
-    //
-    def authorName: String = this._author.name
+    // does not work: author.name is not visible outside Author
+    // def authorName: String = this._author.name
     }

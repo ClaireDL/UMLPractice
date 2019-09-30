@@ -36,32 +36,65 @@ object Main extends App {
   println( s"Circumference is ${c7.circumference}" )
   println( c7.toString() )
 
-  // Exercise 2.1
-  println( "Exercise 2.1" )
+  // Exercise 2.2
+  println( "Exercise 2.2" )
 
-  val ahteck = new Author("Tan Ah Teck", "ahteck@nowhere.com", 'm')
-  println( ahteck )
-  ahteck.email = "paulTan@nowhere.com"
-  println( s"name is: ${ahteck.name}" )
-  println( s"email is ${ahteck.email}" )
+  val authors = List(
+    new Author("Tan Ah Teck", "AhTeck@somewhere.com", 'm'),
+    new Author("Paul Tan", "Paul@nowhere.com", 'm'))
+  println(authors(0))
+  println(authors(1))
 
-  val dummyBook = new Book("Scala for dummy", ahteck, 19.95, 99)
-  println(dummyBook)
+  val scalaDummy = new Book("Scala for Dummy", authors, 19.99, 99)
+  println(scalaDummy.authorNames)
 
-  dummyBook.price = 29.95
-  dummyBook.quantity = 28
-  println(s"name is: ${dummyBook.name}")
-  println(s"price is: ${dummyBook.price}")
-  println(s"quantity is: ${dummyBook.quantity}")
-  println(s"Author is: ${dummyBook.author}")
-  println(s"Author's name is: ${dummyBook.author.name}")
-  println(s"Author's email is: ${dummyBook.author.email}")
+  // Exercise 3.1
+  println( "Exercise 3.1" )
 
-  val anoterBook = new Book("more Scala", new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95)
-  println(anoterBook)
+  val complex1 = new MyComplex()
+  println(complex1)
 
-  println(dummyBook.author.name)
-  println(dummyBook.author.email)
+  val complex2 = new MyComplex(2, 3.5)
+  println(complex2)
 
-  println(authorName)
+  complex2.value(3.4, 5)
+  println(complex2)
+
+  val complex3 = new MyComplex(3, 0)
+  println(complex3.isReal)
+  println(complex3.isImaginary)
+
+  println(complex2.equals(3.4, 5))
+
+  println(complex2.equals(complex3))
+
+  println(complex3.magnitude)
+  println(complex3.argument)
 }
+
+// This is Exercise 2.1
+  // val ahteck = new Author("Tan Ah Teck", "ahteck@nowhere.com", 'm')
+  // println( ahteck )
+  // ahteck.email = "paulTan@nowhere.com"
+  // println( s"name is: ${ahteck.name}" )
+  // println( s"email is ${ahteck.email}" )
+
+  // val dummyBook = new Book("Scala for dummy", ahteck, 19.95, 99)
+  // println(dummyBook)
+
+  // dummyBook.price = 29.95
+  // dummyBook.quantity = 28
+  // println(s"name is: ${dummyBook.name}")
+  // println(s"price is: ${dummyBook.price}")
+  // println(s"quantity is: ${dummyBook.quantity}")
+  // println(s"Author is: ${dummyBook.author}")
+  // println(s"Author's name is: ${dummyBook.author.name}")
+  // println(s"Author's email is: ${dummyBook.author.email}")
+
+  // val anotherBook = new Book("more Scala", new Author("Paul Tan", "paul@somewhere.com", 'm'), 29.95)
+  // println(anotherBook)
+
+  // println(dummyBook.author.name)
+  // println(dummyBook.author.email)
+
+  // println(authorName)
