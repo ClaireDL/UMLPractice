@@ -70,6 +70,39 @@ object Main extends App {
 
   println(complex3.magnitude)
   println(complex3.argument)
+
+  val right = new MyComplex(1, 2.5)
+  println(complex2.add(right))
+  println(complex2.multiply(right))
+
+  // Exercise 4.1
+  println( "Exercise 4.1" )
+
+  val c8 = new Cylinder(2.0, 3.5)
+  c8.colour = "blue"
+  println(c8.volume)
+  println(c8)
+
+  // Exercise 4.2
+  println( "Exercise 4.2" )
+
+  val fab = new Person("Fab", "central London")
+  println(fab)
+  val claire = new Student("Claire", "Colchester", "programming", 2018, 3400)
+  println(claire)
+  val fabTeach = new Staff("Fab", "Mile end", "School of life", 57000)
+  println(fabTeach)
+
+
+  // Exercise 5.1
+  println( "Exercise 5.1" )
+
+  val point = new Point(2, 5)
+  println(point)
+  val line1 = new Line(4, 7)
+  val line2 = new Line(1, 3, 5, 8)
+  println(line1)
+  println(line2)
 }
 
 // This is Exercise 2.1

@@ -26,4 +26,14 @@ class MyComplex(var real: Double, var imag: Double) {
 
   // atan2(y, x) avoids division by 0, which atan(Double) does not
   def argument: Double = Math.atan2(this.imag, this.real)
+
+  def add(right: MyComplex): MyComplex = new MyComplex(
+    right.real + real,
+    right.imag + imag
+  )
+
+  def multiply(right: MyComplex): MyComplex = new MyComplex(
+    right.real * real - right.imag * imag,
+    right.real * imag + right.imag * real
+  )
 }
