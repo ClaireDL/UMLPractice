@@ -90,19 +90,23 @@ object Main extends App {
   println(fab)
   val claire = new Student("Claire", "Colchester", "programming", 2018, 3400)
   println(claire)
-  val fabTeach = new Staff("Fab", "Mile end", "School of life", 57000)
+  val fabTeach = new Staff("Fab", "Mile end", "School of life", 100)
   println(fabTeach)
 
 
   // Exercise 5.1
   println( "Exercise 5.1" )
 
-  val point = new Point(2, 5)
+  val point = new Point(2, 4)
   println(point)
-  val line1 = new Line(4, 7)
-  val line2 = new Line(1, 3, 5, 8)
+  val line1 = new Line(point, new Point(5, 2))
+  val line2 = new Line(1, 2, 3, 4)
   println(line1)
   println(line2)
+  println(s"Length is: ${line2.length}")
+
+  val line3 = new LineSub(1, 1, 3, 4)
+  println(s"Length: ${line3.length}")
 }
 
 // This is Exercise 2.1

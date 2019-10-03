@@ -10,7 +10,8 @@ class Circle3(var radius: Double, var colour: String) {
   override def toString(): String = s"Circle[radius= $radius colour= $colour]"
 }
 
-class Cylinder(radius: Double, var height: Double, colour: String) extends Circle3(radius, colour) {
+class Cylinder(radius: Double, var height: Double, colour: String)
+extends Circle3(radius, colour) {
   def this() = this(1.0, 1.0, "red")
 
   def this(radius: Double) = this(radius, 1.0, "red")
@@ -19,5 +20,5 @@ class Cylinder(radius: Double, var height: Double, colour: String) extends Circl
 
   def volume: Double = area * this.height
 
-  override def toString(): String = s"Cylinder: ${super.toString()} height = $height"
+  override def toString(): String = s"Cylinder: ${super.toString()} height= $height"
 }
